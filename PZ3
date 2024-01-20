@@ -1,0 +1,28 @@
+class PatientBirthDate:
+  def __init__(self, day, month, year):
+    self.day = day
+    self.month = month
+    self.year = year
+
+  def get_day(self):
+    return self.day
+
+  def set_day(self, day):
+    self.day = day
+
+  def get_month (self):
+    return self.month
+
+  def set_month(self, month):
+    self.month = month
+
+  def get_year(self):
+    return self.year
+
+  def set_year(self, year):
+    self.year = year
+
+patient1 = PatientBirthDate(15, 5, 1990)
+print("Дата рождения пациента 1:", patient1.get_day(), patient1.get_month(), patient1.get_year())
+patient2 = PatientBirthDate(20, 10, 1985)
+print("Дата рождения пациента 2:", patient2.get_day(), patient2.get_month(), patient2.get_year())
