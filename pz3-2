@@ -1,0 +1,38 @@
+class Patient:
+    def __init__(self, day, month, year):
+        self.set_day(day)
+        self.set_month(month)
+        self.set_year(year)
+
+    def set_day(self, day):
+        self.__day = day
+
+    def get_day(self):
+        return self.__day
+
+    def set_month(self, month):
+        month = (
+        "январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь",
+        "декабрь")
+        if month in month:
+            self.__month = month
+        else:
+            print("Месяц должен быть в диапозоне от январь до декабрь")
+
+    def get_month(self):
+        return self.__month
+
+    def calculate_age(self, current_year):
+        age = current_year - self.get_year()
+        return age
+
+    def get_year(self):
+        return self.__year
+
+
+patient1: Patient = Patient(15, "Май", 1990)
+print("Пациент 1: Дата рождения - {} {}, {}".format(patient1.get_day(), patient1.get_month(), patient1.get_year()))
+print("Возраст пациента 1:", patient1.calculate_age(2024))
+patient2 = Patient(20, "Октябрь", 1985)
+print("Пациент 2: Дата рождения - {} {}, {}".format(patient2.get_day(), patient2.get_month(), patient2.get_year()))
+print("Возраст пациента 2:", patient2.calculate_age(2024))
